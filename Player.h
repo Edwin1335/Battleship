@@ -64,7 +64,7 @@ void Player::Place_Ships()
                 std::cout << "To: ";
                 std::cin >> to;
             }
-            if(sBoard.Ship_Placement_is_Possible(from,to,i))
+            if (sBoard.Ship_Placement_is_Possible(from, to, i))
             {
                 incorrectPlacement = false;
             }
@@ -72,4 +72,6 @@ void Player::Place_Ships()
     }
 }
 
-
+void Player::Defend(std::string)
+{
+}

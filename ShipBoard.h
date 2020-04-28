@@ -22,7 +22,7 @@ private:
     bool Possible_Ship_Placement(std::string, std::string, int);
     bool Ships_Overlap(int, int, int, int, int);
     int Convert_Char_to_Int(char);
-    void Place_Ships(int,int,int,int,int);
+    void Place_Ships(int, int, int, int, int);
 
 public:
     ShipBoard();
