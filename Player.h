@@ -72,6 +72,7 @@ void Player::Place_Ships()
             }
         }
     }
+
 }
 
 void Player::Defend(std::string)
@@ -81,22 +82,28 @@ void Player::Defend(std::string)
 
 void Player::Convert_String_to_Coor(std::string &input, int &c1, int &r1, int &c2, int &r2)
 {
-    
 }
 
 void Player::Display_Boards()
 {
-    // Add the an extra elemenst to the print out whne printing out the board.
-    std::string display = name + "'s boards";
-
-    //
-    std::cout << std::setw(display.size() * 3) << std::setfill('_') << "_" << std::setfill(' ') << std::endl;
-    std::cout << "|" << std::setw(display.size() * 3 - 1) << std::setfill(' ') << "|" << std::endl;
-    std::cout << "|" << std::setw(display.size() - 1) << std::setfill(' ') << " ";
+    // Display the Ship Board along witht the name of the board.
+    std::string display = name + "'s Target Board";
+    std::cout << std::setfill('_') << std::setw(display.size() * 3) <<  "_" << std::endl;
+    std::cout << "|" << std::setfill(' ') << std::setw(display.size() * 3 - 1) << "|" << std::endl;
+    std::cout << "|" << std::setfill(' ') << std::setw(display.size() - 1) << " ";
     std::cout << std::setw(display.size()) << display;
     std::cout << std::setw(display.size()) << "|" << std::endl;
-    std::cout << "|" << std::setw(display.size() * 3 - 1) << std::setfill('_') << "|" << std::endl;
-
-    sBoard.Build_Board();
+    std::cout << "|" << std::setfill('_') << std::setw(display.size() * 3 - 1) << "|" << std::endl;
     tBaord.Build_Board();
+    
+    // Display the Target borad along with the name of the target board.
+    display = name + "'s Ship Board";
+    std::cout << std::setfill('_') << std::setw(display.size() * 3) << "_" << std::endl;
+    std::cout << "|" << std::setfill(' ') << std::setw(display.size() * 3 - 1) << "|" << std::endl;
+    std::cout << "|" << std::setfill(' ') << std::setw(display.size() - 1) << " ";
+    std::cout << std::setw(display.size()) << display;
+    std::cout << std::setw(display.size()) << "|" << std::endl;
+    std::cout << "|" << std::setfill('_') << std::setw(display.size() * 3 - 1) << "|" << std::endl;
+    sBoard.Build_Board();
+
 }
