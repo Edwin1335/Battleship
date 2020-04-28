@@ -35,6 +35,6 @@ Player::Player(std::string name)
 
 void Player::Place_Ships()
 {
-    sBoard.Place_Ships();
+    
 }
 
