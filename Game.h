@@ -89,11 +89,12 @@ void Game::Launch_One_Player_Game()
     std::cout << "|____________________________________|" << std::endl;
 
     // Begin creating first player.
-    Player playerOne;
+    Player playerOne("Edwin");
 
     // Ask player to place the 7 ships 
     std::cout << "Please place the 7 ships on your board" << std::endl;
-    playerOne.Place_Ships();
+    //playerOne.Place_Ships();
+    playerOne.Display_Boards();
 }
 
 void Game::Launch_Two_Player_Game()

@@ -2,8 +2,9 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include "Board.h"
 
-class TargetBoard
+class TargetBoard : public Board
 {
 public:
     std::string hit;
@@ -17,4 +18,5 @@ public:
 TargetBoard::TargetBoard()
 {
     hit = " HIT ";
+    this->Create_Nodes();
 }

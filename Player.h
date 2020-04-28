@@ -11,6 +11,7 @@ private:
     ShipBoard sBoard;
     TargetBoard tBaord;
     std::string name;
+    void Convert_String_to_Coor(std::string &, int &, int &, int &, int &);
 
 public:
     Player();
@@ -18,6 +19,7 @@ public:
     void Place_Ships();
     std::string Attack();
     void Defend(std::string);
+    void Display_Boards();
 };
 
 Player::Player()
@@ -74,4 +76,27 @@ void Player::Place_Ships()
 
 void Player::Defend(std::string)
 {
+    int col1, row1, col2, row2;
+}
+
+void Player::Convert_String_to_Coor(std::string &input, int &c1, int &r1, int &c2, int &r2)
+{
+    
+}
+
+void Player::Display_Boards()
+{
+    // Add the an extra elemenst to the print out whne printing out the board.
+    std::string display = name + "'s boards";
+
+    //
+    std::cout << std::setw(display.size() * 3) << std::setfill('_') << "_" << std::setfill(' ') << std::endl;
+    std::cout << "|" << std::setw(display.size() * 3 - 1) << std::setfill(' ') << "|" << std::endl;
+    std::cout << "|" << std::setw(display.size() - 1) << std::setfill(' ') << " ";
+    std::cout << std::setw(display.size()) << display;
+    std::cout << std::setw(display.size()) << "|" << std::endl;
+    std::cout << "|" << std::setw(display.size() * 3 - 1) << std::setfill('_') << "|" << std::endl;
+
+    sBoard.Build_Board();
+    tBaord.Build_Board();
 }
