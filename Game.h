@@ -93,7 +93,7 @@ void Game::Launch_One_Player_Game()
 
     // Ask player to place the 7 ships 
     std::cout << "Please place the 7 ships on your board" << std::endl;
-    //playerOne.Place_Ships();
+    playerOne.Place_Ships();
     playerOne.Display_Boards();
 }
 
