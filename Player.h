@@ -35,6 +35,41 @@ Player::Player(std::string name)
 
 void Player::Place_Ships()
 {
-    
+    // Vlaues to retrieve from the user.
+    std::string from;
+    std::string to;
+    bool incorrectPlacement;
+
+    // Display to place the ships based by name and give info on ship size.
+    for (int i = 0; i < 7; i++)
+    {
+        // Lopp incase incorrect input after CheckPissobleShiPlacemetn.
+        incorrectPlacement = true;
+        while (incorrectPlacement)
+        {
+            sBoard.Build_Board();
+            std::cout << std::endl;
+            std::cout << std::setw(15) << std::left << "Place ship"
+                      << "\"" << (sBoard.getShips() + i)->name << "\"" << std::endl;
+            std::cout << std::setw(16) << "Size: " << (sBoard.getShips() + i)->size << std::endl;
+            std::cout << "Example: From: A1 To: " << (sBoard.getShips() + i)->size << " apart" << std::endl;
+            std::cout << "From: ";
+            std::cin >> from;
+            if (i == 5 || i == 6)
+            {
+                to = from;
+            }
+            else
+            {
+                std::cout << "To: ";
+                std::cin >> to;
+            }
+            if(sBoard.Ship_Placement_is_Possible(from,to,i))
+            {
+                incorrectPlacement = false;
+            }
+        }
+    }
 }
+
 

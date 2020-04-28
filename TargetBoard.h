@@ -16,6 +16,5 @@ public:
 
 TargetBoard::TargetBoard()
 {
-    
     hit = " HIT ";
 }

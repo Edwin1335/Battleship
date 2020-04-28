@@ -219,30 +219,60 @@ void Board::Build_Board()
     std::cout << "| SHP |  A  |  B  |  C  |  D  |  E  |  F  |  G  |  H  |  I  |  J  |" << std::endl;
     std::cout << "|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|" << std::endl;
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 1; i < 11; i++)
     {
-        std::cout << "|     |     |     |     |     |     |     |     |     |     |     |" << std::endl;
-        std::cout << "|  " << i << "  |" << temp->value;
-        temp = temp->right;
-        std::cout << "|" << temp->value;
-        temp = temp->right;
-        std::cout << "|" << temp->value;
-        temp = temp->right;
-        std::cout << "|" << temp->value;
-        temp = temp->right;
-        std::cout << "|" << temp->value;
-        temp = temp->right;
-        std::cout << "|" << temp->value;
-        temp = temp->right;
-        std::cout << "|" << temp->value;
-        temp = temp->right;
-        std::cout << "|" << temp->value;
-        temp = temp->right;
-        std::cout << "|" << temp->value;
-        temp = temp->right;
-        std::cout << "|" << temp->value;
-        std::cout << "|" << std::endl;
-        std::cout << "|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|" << std::endl;
+        if (i == 10)
+        {
+            // A special case when the number 10 occu[ies two spaces so we need to delete one of the spaces
+            std::cout << "|     |     |     |     |     |     |     |     |     |     |     |" << std::endl;
+            std::cout << "| " << i << "  |" << temp->value;
+            temp = temp->right;
+            std::cout << "|" << temp->value;
+            temp = temp->right;
+            std::cout << "|" << temp->value;
+            temp = temp->right;
+            std::cout << "|" << temp->value;
+            temp = temp->right;
+            std::cout << "|" << temp->value;
+            temp = temp->right;
+            std::cout << "|" << temp->value;
+            temp = temp->right;
+            std::cout << "|" << temp->value;
+            temp = temp->right;
+            std::cout << "|" << temp->value;
+            temp = temp->right;
+            std::cout << "|" << temp->value;
+            temp = temp->right;
+            std::cout << "|" << temp->value;
+            std::cout << "|" << std::endl;
+            std::cout << "|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|" << std::endl;
+        }
+        else
+        {
+            std::cout << "|     |     |     |     |     |     |     |     |     |     |     |" << std::endl;
+            std::cout << "|  " << i << "  |" << temp->value;
+            temp = temp->right;
+            std::cout << "|" << temp->value;
+            temp = temp->right;
+            std::cout << "|" << temp->value;
+            temp = temp->right;
+            std::cout << "|" << temp->value;
+            temp = temp->right;
+            std::cout << "|" << temp->value;
+            temp = temp->right;
+            std::cout << "|" << temp->value;
+            temp = temp->right;
+            std::cout << "|" << temp->value;
+            temp = temp->right;
+            std::cout << "|" << temp->value;
+            temp = temp->right;
+            std::cout << "|" << temp->value;
+            temp = temp->right;
+            std::cout << "|" << temp->value;
+            std::cout << "|" << std::endl;
+            std::cout << "|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|" << std::endl;
+        }
+
         Corner = Corner->bottom;
         temp = Corner;
     }
