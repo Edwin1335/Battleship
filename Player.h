@@ -4,9 +4,7 @@
 #include "Board.h"
 #include "ShipBoard.h"
 #include "TargetBoard.h"
-/*
-Testing Testing dcsdc
-*/
+
 class Player
 {
 private:
