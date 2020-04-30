@@ -100,11 +100,13 @@ void Player::Defend(std::string)
 void Player::Convert_String_to_Coor(std::string &input, int &c1, int &r1, int &c2, int &r2)
 {
 }
+/*
+cdnsjcnsdk;cnsdkcnsdkcnsdkcnsdcjnsdckj*/
 
 /*********************************************************************************
   Display_Baord will be called in order to display the updated versions of both 
   boards, the ship and target board for the player in order for him/her to choose 
-  the next move.
+  the next move. 
  *********************************************************************************/
 void Player::Display_Boards()
 {
