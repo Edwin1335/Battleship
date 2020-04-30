@@ -22,6 +22,10 @@ public:
     void Display_Boards();
 };
 
+/*********************************************************************************
+  The Default constructor will ask the user to input his/her name so that it can 
+  later be displayed on the screen in multiple areas od the code.
+ *********************************************************************************/
 Player::Player()
 {
     std::cout << "Please eneter your name: " << std::endl;
@@ -29,12 +33,25 @@ Player::Player()
     std::cout << "Welcome  " << name << std::endl;
 }
 
+/*********************************************************************************
+  The overloaded constructor will have a paramter of type string, that will be
+  used to intialize the name of the player and be used in the game just like the 
+  default constructor.
+ *********************************************************************************/
 Player::Player(std::string name)
 {
     this->name = name;
     std::cout << "Welcome  " << name << std::endl;
 }
 
+/*********************************************************************************
+  The place ships will lopp seven times inorder to place all seven ships. Each 
+  time it will promt the user the name of the ship and the size of the ship as 
+  well as a "From" and a "To" command.From what node to what node will the ship be
+  in. This will call the shiplacment function insode the Ship board class, if the 
+  ship will not overlap or is eneterd incorrect values, it will ask the user ot try
+  again.
+ *********************************************************************************/
 void Player::Place_Ships()
 {
     // Vlaues to retrieve from the user.
@@ -84,6 +101,11 @@ void Player::Convert_String_to_Coor(std::string &input, int &c1, int &r1, int &c
 {
 }
 
+/*********************************************************************************
+  Display_Baord will be called in order to display the updated versions of both 
+  boards, the ship and target board for the player in order for him/her to choose 
+  the next move.
+ *********************************************************************************/
 void Player::Display_Boards()
 {
     // Display the Ship Board along witht the name of the board.
