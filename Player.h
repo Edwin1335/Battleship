@@ -100,8 +100,6 @@ void Player::Defend(std::string)
 void Player::Convert_String_to_Coor(std::string &input, int &c1, int &r1, int &c2, int &r2)
 {
 }
-/*
-cdnsjcnsdk;cnsdkcnsdkcnsdkcnsdcjnsdckj*/
 
 /*********************************************************************************
   Display_Baord will be called in order to display the updated versions of both 
