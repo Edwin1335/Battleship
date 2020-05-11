@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <sstream>
 #include <string>
 #include "Board.h"
 #include "ShipBoard.h"
@@ -25,7 +26,7 @@ public:
 /*********************************************************************************
   The Default constructor will ask the user to input his/her name so that it can 
   later be displayed on the screen in multiple areas od the code.
- *********************************************************************************/
+*********************************************************************************/
 Player::Player()
 {
     std::cout << "Please eneter your name: " << std::endl;
@@ -37,7 +38,7 @@ Player::Player()
   The overloaded constructor will have a paramter of type string, that will be
   used to intialize the name of the player and be used in the game just like the 
   default constructor.
- *********************************************************************************/
+*********************************************************************************/
 Player::Player(std::string name)
 {
     this->name = name;
@@ -51,7 +52,7 @@ Player::Player(std::string name)
   in. This will call the shiplacment function insode the Ship board class, if the 
   ship will not overlap or is eneterd incorrect values, it will ask the user ot try
   again.
- *********************************************************************************/
+*********************************************************************************/
 void Player::Place_Ships()
 {
     // Vlaues to retrieve from the user.
@@ -89,43 +90,50 @@ void Player::Place_Ships()
             }
         }
     }
-
 }
 
-void Player::Defend(std::string)
+void Player::Defend(std::string def)
 {
     int col1, row1, col2, row2;
+    Convert_String_to_Coor(def,col1, row1,col2, row2);
 }
 
+/*********************************************************************************
+  We will need to convert the coordinates passed in by the attacker to be able to 
+  defend. The string will need to be sepereated by characters and numbers. The 
+  string will be parsed and sepereated into their appropriate categories.
+*********************************************************************************/
 void Player::Convert_String_to_Coor(std::string &input, int &c1, int &r1, int &c2, int &r2)
 {
+    c1 = (int)input[0];
 }
 
 /*********************************************************************************
   Display_Baord will be called in order to display the updated versions of both 
   boards, the ship and target board for the player in order for him/her to choose 
   the next move. 
- *********************************************************************************/
+*********************************************************************************/
 void Player::Display_Boards()
 {
     // Display the Ship Board along witht the name of the board.
-    std::string display = name + "'s Target Board";
-    std::cout << std::setfill('_') << std::setw(display.size() * 3) <<  "_" << std::endl;
-    std::cout << "|" << std::setfill(' ') << std::setw(display.size() * 3 - 1) << "|" << std::endl;
-    std::cout << "|" << std::setfill(' ') << std::setw(display.size() - 1) << " ";
-    std::cout << std::setw(display.size()) << display;
-    std::cout << std::setw(display.size()) << "|" << std::endl;
-    std::cout << "|" << std::setfill('_') << std::setw(display.size() * 3 - 1) << "|" << std::endl;
+    // std::string display = name + "'s Target Board";
+    // std::cout << std::setfill('_') << std::setw(display.size() * 3) <<  "_" << std::endl;
+    // std::cout << "|" << std::setfill(' ') << std::setw(display.size() * 3 - 1) << "|" << std::endl;
+    // std::cout << "|" << std::setfill(' ') << std::setw(display.size() - 1) << " ";
+    // std::cout << std::setw(display.size()) << display;
+    // std::cout << std::setw(display.size()) << "|" << std::endl;
+    // std::cout << "|" << std::setfill('_') << std::setw(display.size() * 3 - 1) << "|" << std::endl;
+    std::cout << name << "'s Ship Board" << std::endl;
     tBaord.Build_Board();
-    
-    // Display the Target borad along with the name of the target board.
-    display = name + "'s Ship Board";
-    std::cout << std::setfill('_') << std::setw(display.size() * 3) << "_" << std::endl;
-    std::cout << "|" << std::setfill(' ') << std::setw(display.size() * 3 - 1) << "|" << std::endl;
-    std::cout << "|" << std::setfill(' ') << std::setw(display.size() - 1) << " ";
-    std::cout << std::setw(display.size()) << display;
-    std::cout << std::setw(display.size()) << "|" << std::endl;
-    std::cout << "|" << std::setfill('_') << std::setw(display.size() * 3 - 1) << "|" << std::endl;
-    sBoard.Build_Board();
 
+    // Display the Target borad along with the name of the target board.
+    // display = name + "'s Ship Board";
+    // std::cout << std::setfill('_') << std::setw(display.size() * 3) << "_" << std::endl;
+    // std::cout << "|" << std::setfill(' ') << std::setw(display.size() * 3 - 1) << "|" << std::endl;
+    // std::cout << "|" << std::setfill(' ') << std::setw(display.size() - 1) << " ";
+    // std::cout << std::setw(display.size()) << display;
+    // std::cout << std::setw(display.size()) << "|" << std::endl;
+    // std::cout << "|" << std::setfill('_') << std::setw(display.size() * 3 - 1) << "|" << std::endl;
+    std::cout << name << "'s Target Board" << std::endl;
+    sBoard.Build_Board();
 }
