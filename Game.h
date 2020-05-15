@@ -4,7 +4,6 @@
 
 class Game
 {
-
 private:
     int Number_Players;
     void Welcome_Choose_Players();
@@ -83,21 +82,33 @@ void Game::Welcome_Choose_Players()
 
 void Game::Launch_One_Player_Game()
 {
-    std::cout << "______________________________________" << std::endl;
-    std::cout << "|                                    |" << std::endl;
-    std::cout << "|      ** Player One Game **         |" << std::endl;
-    std::cout << "|____________________________________|" << std::endl;
-
-    // Begin creating first player.
-    Player playerOne("Edwin");
-
-    // Ask player to place the 7 ships 
-    std::cout << "Please place the 7 ships on your board" << std::endl;
-    playerOne.Place_Ships();
-    playerOne.Display_Boards();
+    std::cout << "Nothing Yet" << std::endl;
 }
 
 void Game::Launch_Two_Player_Game()
 {
-    std::cout << "Nothing Yet" << std::endl;
+    std::cout << "______________________________________" << std::endl;
+    std::cout << "|                                    |" << std::endl;
+    std::cout << "|      ** Player Two Game **         |" << std::endl;
+    std::cout << "|____________________________________|" << std::endl;
+
+    // Begin creating first player.
+    Player playerOne("Edwin");
+    Player playerTwo("Chachir");
+
+    // Ask player one to place the 7 ships.
+    std::cout << "Please place the 7 ships on your board, " << playerOne.name << std::endl;
+    playerOne.Place_Ships();
+    playerOne.Display_Boards();
+
+    // Ask player two to place the 7 ships.
+    std::cout << "Please place the 7 ships on your board, " << playerTwo.name << std::endl;
+    playerTwo.Place_Ships();
+    playerTwo.Display_Boards();
+
+    // Diplay both ships to see if working.
+    std::cout << "Both boards are " << std::endl;
+    playerOne.Display_Boards();
+    playerTwo.Display_Boards();
+
 }
