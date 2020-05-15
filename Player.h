@@ -10,7 +10,7 @@ class Player
 {
 private:
     ShipBoard sBoard;
-    TargetBoard tBaord;
+    TargetBoard tBoard;
     void Convert_String_to_Coor(std::string &, int &, int &, int &, int &);
 
 public:
@@ -124,7 +124,7 @@ void Player::Display_Boards()
     // std::cout << std::setw(display.size()) << "|" << std::endl;
     // std::cout << "|" << std::setfill('_') << std::setw(display.size() * 3 - 1) << "|" << std::endl;
     std::cout << name << "'s Ship Board" << std::endl;
-    sBaord.Build_Board();
+    sBoard.Build_Board();
 
     // Display the Target borad along with the name of the target board.
     // display = name + "'s Ship Board";

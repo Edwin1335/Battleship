@@ -111,4 +111,8 @@ void Game::Launch_Two_Player_Game()
     playerOne.Display_Boards();
     playerTwo.Display_Boards();
 
+    // Begin Attacking 
+    std::cout << playerOne.name << " will now attack " << playerTwo.name << std::endl;
+    
+
 }
