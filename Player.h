@@ -106,7 +106,7 @@ void Player::Defend(std::string def)
 *********************************************************************************/
 void Player::Convert_String_to_Coor(std::string &input, int &c1, int &r1, int &c2, int &r2)
 {
-    c1 = (int)input[0];
+    
 }
 
 /*********************************************************************************
@@ -148,7 +148,9 @@ bool Player::Player_Defeated()
     for(int i = 0; i < sBoard.getShips()->size; i++)
     {
         if(((sBoard.getShips())[i].destroyed == false))
+        {
             return false;
+        } 
     }
     return true;
 }
