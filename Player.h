@@ -20,6 +20,7 @@ public:
     std::string Attack();
     void Defend(std::string);
     void Display_Boards();
+    bool Player_Defeated();
     std::string name;
 };
 
@@ -136,4 +137,18 @@ void Player::Display_Boards()
     // std::cout << "|" << std::setfill('_') << std::setw(display.size() * 3 - 1) << "|" << std::endl;
     std::cout << name << "'s Target Board" << std::endl;
     tBoard.Build_Board();
+}
+
+/*********************************************************************************
+  If all of the players ships are sunked than the player has been defeated. Loop 
+  through all of the players ships and check if they have been sunked.
+*********************************************************************************/
+bool Player::Player_Defeated()
+{
+    for(int i = 0; i < sBoard.getShips()->size; i++)
+    {
+        if(((sBoard.getShips())[i].destroyed == false))
+            return false;
+    }
+    return true;
 }

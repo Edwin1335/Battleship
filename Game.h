@@ -96,6 +96,16 @@ void Game::Launch_Two_Player_Game()
     Player playerOne("Edwin");
     Player playerTwo("Chachir");
 
+    if(playerOne.Player_Defeated())
+    {
+        std::cout << "Testing worked " << std::endl;
+    }
+    else
+    {
+        std::cout << "Player has not been defearted " << std::endl;
+    }
+    
+
     // Ask player one to place the 7 ships.
     std::cout << "Please place the 7 ships on your board, " << playerOne.name << std::endl;
     playerOne.Place_Ships();
